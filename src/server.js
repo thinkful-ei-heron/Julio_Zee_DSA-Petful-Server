@@ -1,11 +1,21 @@
 const express = require('express');
 const cors = require('cors');
 const petsRouter = require('./pets/pet_router');
+const { CLIENT_ORIGIN, PORT } = require('./config');
+const humanRouter = require('./humans/humans-router');
 
 const app = express();
+
 app.use(cors());
 
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
+);
+
 app.use('/api/pets', petsRouter);
+app.use('/api/humans', humanRouter);
 
 // Catch-all 404
 app.use(function(req, res, next) {
