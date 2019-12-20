@@ -1,7 +1,6 @@
 const express = require('./express');
-const jsonBodyParser = express.json();
+//const jsonBodyParser = express.json();
 const petsRouter = express.Router();
+const petsService = require('./pets-service');
 
-petsRouter.route('/dog').get((req, res, next) => {
-  const dog = req.app.get('');
-});
+petsRouter.route('/dog').get((req, res) => {});

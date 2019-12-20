@@ -1,32 +1,24 @@
+const { Queue, peek } = require('../queueClass');
+const pets = require('./pets_store');
+
+let dogQueue = new Queue();
+let catQueue = new Queue();
+
+pets.cats.forEach(cat => catQueue.enqueue(cat));
+pets.dogs.forEach(dog => dogQueue.enqueue(dog));
+
 const PetsService = {
-  getAllPets(knex) {
-    return knex.select('*').from('pets');
+  catAdopt() {
+    return peek(catQueue);
   },
-  getById(knex, id) {
-    return knex
-      .from('pets')
-      .select('*')
-      .where({ id })
-      .first();
+  catDelete() {
+    return catQueue.dequeue();
   },
-  insertPet(knex, newPet) {
-    return knex
-      .insert(newPet)
-      .into('pets')
-      .returning('*')
-      .then(rows => {
-        return rows[0];
-      });
+  dogAdopt() {
+    return peek(dogQueue);
   },
-  deletePet(knex, id) {
-    return knex('pets')
-      .where({ id })
-      .delete();
-  },
-  updatePet(knex, id, newPetFields) {
-    return knex('pets')
-      .where({ id })
-      .update(newPetFields);
+  dogDelete() {
+    return dogQueue.dequeue();
   },
 };
 

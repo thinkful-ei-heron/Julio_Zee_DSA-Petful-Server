@@ -21,11 +21,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN,
-  })
-);
 app.listen(8080, () => {
   console.log('Serving on 8080');
 });
