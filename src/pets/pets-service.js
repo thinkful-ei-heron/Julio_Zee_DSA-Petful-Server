@@ -11,13 +11,13 @@ const PetsService = {
   catAdopt() {
     return peek(catQueue);
   },
-  catDelete() {
+  catDequeque() {
     return catQueue.dequeue();
   },
   dogAdopt() {
     return peek(dogQueue);
   },
-  dogDelete() {
+  dogDequeque() {
     return dogQueue.dequeue();
   },
 };

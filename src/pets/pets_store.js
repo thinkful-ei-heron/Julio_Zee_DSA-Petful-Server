@@ -2,8 +2,8 @@
 const dogs = [
   {
     imageURL:
-      'https://images.dog.ceo/breeds/terrier-sealyham/n02095889_4826.jpg', // imageURL
-    imageDesc: 'Gorgeous dog with pretty white fur.', // image_desc
+      'https://images.dog.ceo/breeds/terrier-sealyham/n02095889_4826.jpg',
+    imageDesc: 'Gorgeous dog with pretty white fur.',
     name: 'Snow',
     sex: 'Girl',
     age: 1,
