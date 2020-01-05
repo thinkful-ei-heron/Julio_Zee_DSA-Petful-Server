@@ -8,11 +8,11 @@ const app = express();
 
 app.use(cors());
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN,
-  })
-);
+// app.use(
+//   cors({
+//     origin: CLIENT_ORIGIN,
+//   })
+// );
 
 app.use('/api/pets', petsRouter);
 app.use('/api/humans', humanRouter);
@@ -30,10 +30,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json({
     message: err.message,
-    error: app.get('env') === 'development' ? err : {},
+    error: app.get('env') === 'development' ? err : {}
   });
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log('Serving on 8080');
 });
