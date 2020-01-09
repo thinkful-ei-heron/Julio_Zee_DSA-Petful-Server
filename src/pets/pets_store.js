@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 const dogs = [
   {
     id: 1,
