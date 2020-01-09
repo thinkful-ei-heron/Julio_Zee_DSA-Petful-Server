@@ -1,26 +1,18 @@
-# Express Boilerplate!
+Application Name: Petful
 
-This is a boilerplate project used for starting new projects!
+Client Repo: 
+https://github.com/thinkful-ei-heron/Julio_Zee_DSA-Petful-Client 
 
-## How do set up?
+API Repo: 
+https://github.com/thinkful-ei-heron/Julio_Zee_DSA-Petful-Server 
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Live App: 
+https://juliozeedsa-petful-client.hernandezjulio58.now.sh/
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+Pair Developers: 
+Julio Hernandez and LaZandrea 'Zee' Celestine
 
-## Scripts
+Petful is an application that allows users to adopt pets.  When the future pet owner signs up, they are added to the adoption list.  Once they are at the top of the list, they will be paired with the next available dog on the list.  
 
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests in watch mode `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+Technology Used: 
+HTML, CSS, JavaScript, Node.js, React, Git, GitHub, Postman
